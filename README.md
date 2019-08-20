@@ -2,12 +2,15 @@
 > Fast and simple organizer for your code snippets.
 
 The main purpose of this script is having a fast ⚡️ and easy way to search
-through your code snippets.
+through your code snippets, mixing the power of
+[ripgrep](https://github.com/BurntSushi/ripgrep) and
+[fzf](https://github.com/junegunn/fzf).
 
 ## Installation
 
-OS X & Linux:
+It currently only works on macOS since it relies on `pbcopy`
 
+macOS:
 
 ```sh
 git clone https://github.com/rickaa/sniplib.git
