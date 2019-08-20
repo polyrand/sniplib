@@ -10,6 +10,16 @@ through your code snippets, mixing the power of
 
 It currently only works on macOS since it relies on `pbcopy`
 
+Requirements:
+* [ripgrep](https://github.com/BurntSushi/ripgrep)
+* [fzf](https://github.com/junegunn/fzf)
+* Optional for fancier preview (any of the following):
+  * [bat](https://github.com/sharkdp/bat)
+  * [highlight](https://github.com/felixfbecker/cli-highlight)
+  * [coderay](https://github.com/rubychan/coderay)
+  * [rougify](https://github.com/rouge-ruby/rouge)
+
+
 macOS:
 
 ```sh
