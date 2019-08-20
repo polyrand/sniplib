@@ -4,8 +4,6 @@
 The main purpose of this script is having a fast ⚡️ and easy way to search
 through your code snippets.
 
-> ![](header.png)
-
 ## Installation
 
 OS X & Linux:
