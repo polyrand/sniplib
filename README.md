@@ -10,7 +10,7 @@ through your code snippets, mixing the power of
 
 It currently only works on macOS since it relies on `pbcopy`
 
-Requirements:
+**Requirements:**
 * [ripgrep](https://github.com/BurntSushi/ripgrep)
 * [fzf](https://github.com/junegunn/fzf)
 * Optional for fancier preview (any of the following):
@@ -32,8 +32,7 @@ chmod +x sniplib.sh
 
 ## Usage example
 
-A few motivating and useful examples of how your product can be used. Spice this up with code blocks and potentially more screenshots.
-
+To do.
 
 ## Release History
 
