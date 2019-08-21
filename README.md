@@ -35,7 +35,7 @@ chmod +x sniplib.sh
 
 See it in action (first copying to clipboard then editing the snippet):
 
-<script id="asciicast-FKI3CtC094xsBP1Eks9frPmDw" src="https://asciinema.org/a/FKI3CtC094xsBP1Eks9frPmDw.js" async></script>
+[![asciicast](https://asciinema.org/a/FKI3CtC094xsBP1Eks9frPmDw.svg)](https://asciinema.org/a/FKI3CtC094xsBP1Eks9frPmDw)
 
 If you want to sort alphabetically the tags in all the snippets, run:
 
