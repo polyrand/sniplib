@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 import os
-from sys.stdout import write as write_stdout
+import sys
 import re
 import fileinput
 
@@ -29,7 +29,7 @@ def sort_tags(file_path: str):
                 # use print instead of stdout to keep newline
                 print(f'"""{" ".join(sorted_tags_list)}"""')
             else:
-                write_stdout(line)
+                sys.stdout.write(line)
 
 
 if __name__ == "__main__":
