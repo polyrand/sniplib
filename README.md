@@ -8,7 +8,6 @@ through your code snippets, mixing the power of
 
 ## Installation
 
-It currently only works on macOS since it relies on `pbcopy`
 
 **Requirements:**
 * [ripgrep](https://github.com/BurntSushi/ripgrep)
@@ -19,8 +18,10 @@ It currently only works on macOS since it relies on `pbcopy`
   * [coderay](https://github.com/rubychan/coderay)
   * [rougify](https://github.com/rouge-ruby/rouge)
 
+This utility relies on `pbcopy` or `xclip`, so if you are not using macOS install xclip with `sudo apt-get install -y xclip`:
 
-macOS:
+
+macOS & linux:
 
 ```sh
 git clone https://github.com/rickaa/sniplib.git

@@ -36,9 +36,17 @@ sl() {
     
     # if ctrl-e: edit, else: 
     if [ -n "$file" ]; then
-        [ "$key" = ctrl-e ] && $EDITOR "$file" || tail -n +$((N+1)) "$file" | pbcopy
+        [ "$key" = ctrl-e ] && $EDITOR "$file" || tail -n +$((N+1)) "$file" | clipcopy
     fi
 
+}
+
+clipcopy() {
+    if hash pbcopy 2>/dev/null; then
+        pbcopy "$@"
+    else
+        xclip -sel clip "$@"
+    fi
 }
 
 sl "$1"
