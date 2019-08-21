@@ -34,8 +34,17 @@ chmod +x sniplib.sh
 
 To do.
 
+If you want to sort alphabetically the tags in all the snippets, run:
+
+```bash
+chmod +x sort_tags.py
+./sort_tags.py
+```
+
 ## Release History
 
+* 0.2
+	* Add tag sort script 
 * 0.1
     * First release
 
