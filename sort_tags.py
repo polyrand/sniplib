@@ -4,9 +4,10 @@ import os
 import sys
 import re
 import fileinput
+from concurrent.futures import ThreadPoolExecutor
 
 
-def recursive_files(path: str):
+def recursive_files(path: str = "snips/"):
     """Yield all files recursively inside a folder."""
     for root, dirs, files in os.walk(path):
         # ignore hidden files
@@ -17,6 +18,7 @@ def recursive_files(path: str):
 def sort_tags(file_path: str):
     """Open file and sort tags in first line."""
     pattern = re.compile("(\"{3}|'{3})(.*)(\"{3}|'{3})")
+    print(file_path)
 
     with fileinput.input(file_path, inplace=True) as f:
         for line in f:
@@ -33,4 +35,5 @@ def sort_tags(file_path: str):
 
 
 if __name__ == "__main__":
-    map(sort_tags, list(recursive_files))
+    with ThreadPoolExecutor(max_workers=8) as executor:
+        future = executor.submit(sort_tags, list(recursive_files()))
