@@ -33,7 +33,9 @@ chmod +x sniplib.sh
 
 ## Usage example
 
-To do.
+See it in action (first copying to clipboard then editing the snippet):
+
+[![asciicast](https://asciinema.org/a/FKI3CtC094xsBP1Eks9frPmDw.svg)](https://asciinema.org/a/FKI3CtC094xsBP1Eks9frPmDw)
 
 If you want to sort alphabetically the tags in all the snippets, run:
 
