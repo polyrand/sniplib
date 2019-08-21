@@ -26,10 +26,21 @@ macOS & linux:
 ```sh
 git clone https://github.com/rickaa/sniplib.git
 chmod +x sniplib.sh
-./sniplib.sh
+./sniplib.sh [SNIPPETS FOLDER] [SEARCH QUERY - optional]
 ```
 
+**Recommended usage:**
 
+Add an alias to your `.bashrc` (or whatever you use) to launch the script with your snippets folder as an argument (or
+you can use mine 😊):
+
+```bash
+#sniplib (with this project's folder)
+alias snip='~/Projects/sniplib/sniplib.sh snips'
+
+#sniplib (with custom folder)
+alias snip='~/Projects/sniplib/sniplib.sh ~/Documents/code_snippets'
+```
 
 ## Usage example
 
@@ -46,8 +57,10 @@ chmod +x sort_tags.py
 
 ## Release History
 
+* 0.3
+	* Enable custom folder 
 * 0.2
-	* Add tag sort script 
+	* Add tag sort script
 * 0.1
     * First release
 
