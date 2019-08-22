@@ -60,3 +60,4 @@ sl "$@"
 # split {q}
 # split() {
 #   read -a strarr <<< "$1"; echo "${strarr[@]}"; }
+# https://junegunn.kr/2015/03/browsing-git-commits-with-fzf
