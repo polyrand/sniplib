@@ -35,11 +35,8 @@ Add an alias to your `.bashrc` (or whatever you use) to launch the script with y
 you can use mine 😊):
 
 ```bash
-#sniplib (with this project's folder)
-alias snip='~/Projects/sniplib/sniplib.sh snips'
-
 #sniplib (with custom folder)
-alias snip='~/Projects/sniplib/sniplib.sh ~/Documents/code_snippets'
+alias snip='~/Projects/sniplib/sniplib.sh ~/Projects/sniplib/snips'
 ```
 
 ## Usage example
