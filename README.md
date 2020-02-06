@@ -66,6 +66,10 @@ chmod +x sort_tags.py
 ./sort_tags.py
 ```
 
+## Notice
+
+If you find a snippet without the appropiate source inside please let me know so that I can give credit to its author.
+
 ## Release History
 
 * 0.3
