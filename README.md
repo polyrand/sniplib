@@ -6,8 +6,20 @@ through your code snippets, mixing the power of
 [ripgrep](https://github.com/BurntSushi/ripgrep) and
 [fzf](https://github.com/junegunn/fzf).
 
-## Installation
+## Why
 
+The amount of tools to keep notes / snippets is huge. I created sniplib for the
+following reasons:
+
+* No lock-in, files are just text and you can keep them however you want.
+* Interactive finding + grepping. Since ripgrep is very fast, I can afford
+    running it every time I type something so that I can have **content
+    grepping** + **fuzzy file matching**.
+* No need to install any app.
+
+Apart from that, I am constantly updating my snippets. Every time I find myself googling the same thing more than twice I put it in a snippet, so next time I can save some time and I know where I can find and answer that works.
+
+## Installation
 
 **Requirements:**
 * [ripgrep](https://github.com/BurntSushi/ripgrep)
@@ -24,7 +36,7 @@ This utility relies on `pbcopy` or `xclip`, so if you are not using macOS instal
 macOS & linux:
 
 ```sh
-git clone https://github.com/rickaa/sniplib.git
+git clone https://github.com/polyrand/sniplib.git
 chmod +x sniplib.sh
 ./sniplib.sh [SNIPPETS FOLDER] [SEARCH QUERY - optional]
 ```
@@ -38,6 +50,8 @@ you can use mine 😊):
 #sniplib (with custom folder)
 alias snip='~/Projects/sniplib/sniplib.sh ~/Projects/sniplib/snips'
 ```
+
+(*Note:* `~/Projects/sniplib/sniplib.sh` would be where you download the script and `~/Projects/sniplib/snips` would be you snippets/notes folder).
 
 ## Usage example
 
@@ -55,7 +69,7 @@ chmod +x sort_tags.py
 ## Release History
 
 * 0.3
-	* Enable custom folder 
+	* Enable custom folder
 * 0.2
 	* Add tag sort script
 * 0.1
@@ -67,11 +81,11 @@ Ricardo Ander-Egg Aguilar – [@ricardoanderegg](https://twitter.com/ricardoande
 
 Distributed under the MIT license. See ``LICENSE`` for more information.
 
-[https://github.com/rickaa/](https://github.com/rickaa/)
+[https://github.com/polyrand/](https://github.com/polyrand/)
 
 ## Contributing
 
-1. Fork it (<https://github.com/rickaa/sniplib/fork>)
+1. Fork it (<https://github.com/polyrand/sniplib/fork>)
 2. Create your feature branch (`git checkout -b feature/fooBar`)
 3. Commit your changes (`git commit -am 'Add some fooBar'`)
 4. Push to the branch (`git push origin feature/fooBar`)
