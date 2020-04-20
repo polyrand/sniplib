@@ -53,6 +53,13 @@ alias snip='~/Projects/sniplib/sniplib.sh ~/Projects/sniplib/snips'
 
 (*Note:* `~/Projects/sniplib/sniplib.sh` would be where you download the script and `~/Projects/sniplib/snips` would be you snippets/notes folder).
 
+Color configuration:
+
+Since `sniplib` relies on fzf, you can (and should) set up the colors as you want to have a better experience:
+
+* https://github.com/junegunn/fzf/wiki/Color-schemes
+* https://minsw.github.io/fzf-color-picker/
+
 ## Usage example
 
 See it in action (first copying to clipboard then editing the snippet):
