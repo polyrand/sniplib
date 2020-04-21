@@ -60,6 +60,11 @@ Since `sniplib` relies on fzf, you can (and should) set up the colors as you wan
 * https://github.com/junegunn/fzf/wiki/Color-schemes
 * https://minsw.github.io/fzf-color-picker/
 
+
+**BUG CAUTION**
+
+The `sort_tags.py` script does what it says, it sorts alphabetically all the tags. Right now if a file has no tag all its content will get deleted so use with caution and use a version control system.
+
 ## Usage example
 
 See it in action (first copying to clipboard then editing the snippet):
