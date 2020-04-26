@@ -27,6 +27,9 @@ def sort_tags(file_path: str):
                 # 3. make list 4. sort list
                 sorted_tags_list = sorted(pattern.match(line.strip()).group(2).split())
 
+                if not sorted_tags_list:
+                    return
+
                 # stdout is written to file
                 # use print instead of stdout to keep newline
                 print(f'"""{" ".join(sorted_tags_list)}"""')
