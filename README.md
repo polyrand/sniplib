@@ -41,6 +41,8 @@ chmod +x sniplib.sh
 ./sniplib.sh [SNIPPETS FOLDER] [SEARCH QUERY - optional]
 ```
 
+**Note**: this has been developed and tested only on macOS, but it should be compatible with anything that can run `xclip` too. If not, please open an issue so that I can look at it.
+
 **Recommended usage:**
 
 Add an alias to your `.bashrc` (or whatever you use) to launch the script with your snippets folder as an argument (or
@@ -96,6 +98,8 @@ If you find a snippet without the appropiate source inside please let me know so
 
 ## Release History
 
+* 1.0
+	* Bugs fixed
 * 0.3
 	* Enable custom folder
 * 0.2
