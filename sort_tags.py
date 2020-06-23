@@ -4,7 +4,10 @@ import os
 import sys
 import re
 import fileinput
-from concurrent.futures import ThreadPoolExecutor
+
+# uncomment the next line and change the last 4 lines
+# if you need to go faster
+# from concurrent.futures import ThreadPoolExecutor
 
 
 def recursive_files(path: str = "snips/"):
@@ -18,17 +21,20 @@ def recursive_files(path: str = "snips/"):
 def sort_tags(file_path: str):
     """Open file and sort tags in first line."""
     pattern = re.compile("(\"{3}|'{3})(.*)(\"{3}|'{3})")
-    print(file_path)
+    print("path:", file_path)
 
     with fileinput.input(file_path, inplace=True) as f:
         for line in f:
             if f.isfirstline():
                 # 1. strip, 2. match pattern and pick 2n group (tags)
                 # 3. make list 4. sort list
-                sorted_tags_list = sorted(pattern.match(line.strip()).group(2).split())
+                match = pattern.match(line.strip())
 
-                if not sorted_tags_list:
-                    return
+                if not match:
+                    sys.stdout.write(line)
+                    continue
+
+                sorted_tags_list = sorted(match.group(2).split())
 
                 # stdout is written to file
                 # use print instead of stdout to keep newline
@@ -38,5 +44,9 @@ def sort_tags(file_path: str):
 
 
 if __name__ == "__main__":
-    with ThreadPoolExecutor(max_workers=8) as executor:
-        future = executor.submit(sort_tags, list(recursive_files()))
+    for f in list(recursive_files()):
+        sort_tags(f)
+
+    # uncomment these lines too for threaded processing
+    # with ThreadPoolExecutor(max_workers=8) as executor:
+    #     future = executor.submit(sort_tags, list(recursive_files()))
