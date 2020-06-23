@@ -63,7 +63,7 @@ Since `sniplib` relies on fzf, you can (and should) set up the colors as you wan
 
 **BUG CAUTION**
 
-The `sort_tags.py` script does what it says, it sorts alphabetically all the tags. Right now if a file has no tag all its content will get deleted so use with caution and use a version control system.
+The `sort_tags.py` script does what it says, it sorts alphabetically all the tags. There was a bug in which if a file has no tags, all its content will get deleted. The bug is fixed now and tested, but it is a reminder to use a version control system.
 
 ## Usage example
 
@@ -77,6 +77,18 @@ If you want to sort alphabetically the tags in all the snippets, run:
 chmod +x sort_tags.py
 ./sort_tags.py
 ```
+
+For a better experience, set up FZF colors as you like. The ones I use are different from that terminal video:
+
+```sh
+export FZF_DEFAULT_COMMAND='fd --type f --follow --exclude .git --color=always'
+
+export FZF_DEFAULT_OPTS='
+  --color hl:#e84343,hl+:#23a4fa
+'
+
+```
+
 
 ## Notice
 
