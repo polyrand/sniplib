@@ -6,6 +6,8 @@ through your code snippets, mixing the power of
 [ripgrep](https://github.com/BurntSushi/ripgrep) and
 [fzf](https://github.com/junegunn/fzf).
 
+I created this to manage code snippets that I saw myself using and searching for regularly. But now I also store short notes or cheatsheets I need to go back.
+
 ## Why
 
 The amount of tools to keep notes / snippets is huge. I created sniplib for the
@@ -94,7 +96,7 @@ export FZF_DEFAULT_OPTS='
 
 ## Notice
 
-If you find a snippet without the appropiate source inside please let me know so that I can give credit to its author.
+If you find a snippet without the appropriate source inside please let me know so that I can give credit to its author.
 
 ## Release History
 
