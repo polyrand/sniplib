@@ -3,17 +3,18 @@
 
 sl() {
 
-    # N = number of lines to skip when copying the file contents
-    # 1 = skip tags line
-    # more info: https://stackoverflow.com/questions/604864/print-a-file-skipping-first-x-lines-in-bash
+    # N = number of lines to skip
+    # skip tags line
+    # https://stackoverflow.com/questions/604864/print-a-file-skipping-first-x-lines-in-bash
     local N=1
 
-    out=("$(rg "(\"{3}|'{3})[\sa-z0-9]*(\"{3}|'{3})" $1 | fzf --delimiter=:\
-    --preview='[[ $(file --mime {1}) =~ binary ]]\
-    && echo {1} is a binary file || (bat --style=numbers\
-    --color=always {1} || highlight -O ansi -l {1} || coderay {1} ||\
-    rougify {1} || cat {1}) 2> /dev/null | head -500' --query="${@:2}"\
+    out=("$(rg "(\"{3}|'{3})[\sa-z0-9]*(\"{3}|'{3})" $1 | fzf --delimiter=: \
+    --preview='[[ $(file --mime {1}) =~ binary ]] && echo {1} is a binary file || (bat --style=numbers --color=always {1}|| cat {1}) 2> /dev/null | head -500' \
+    --query="${@:2}" \
     --exit-0 --expect=ctrl-e)")
+    
+    # you can add the following to replace `bat` with something else:
+    # || highlight -O ansi -l {1} || coderay {1} || rougify {1} 
 
     key=$(head -1 <<< "$out")
 
