@@ -67,7 +67,7 @@ Since `sniplib` relies on fzf, you can (and should) set up the colors as you wan
 
 **BUG CAUTION**
 
-The `sort_tags.py` script does what it says, it sorts alphabetically all the tags. There was a bug in which if a file has no tags, all its content will get deleted. The bug is fixed now and tested, but it is a reminder to use a version control system.
+The `sort_tags.py` script does what it says, it sorts alphabetically all the tags. There was a bug in which if a file had no tags, all its content would get deleted. The bug is fixed now and tested, but it is a reminder to use a version control system.
 
 ## Usage example
 
@@ -93,6 +93,26 @@ export FZF_DEFAULT_OPTS='
 
 ```
 
+## Benchmarks
+
+I replicated my personal snippets folder many times. Total size is 604Mb and there are 163680 files inside the directory tree (`find load/ -type f | wc -l`). Take into account this is an very deeply nested tree of folders.
+
+```bash
+# load/ is the test folder full of files
+# 'pandas where' is a random query I chose.
+
+time ./sniplib.sh load/ 'pandas where'
+```
+
+```
+real	0m27.536s
+user	0m7.713s
+sys		0m23.021s
+```
+
+That's the time it takes to traverse the whole directory looking for those tags. The timing is not very precise because I have to `ctrl + C` for it to finish. On average (of a few runs) it was taking 21 seconds.
+
+Using that same folder, the interactive search works perfectly, just slightly more laggy than with a *not huge* folder.
 
 ## Notice
 
